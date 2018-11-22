@@ -1,19 +1,4 @@
 # create a keras running env
-# image
-# 	build image locally: 
-#		docker build --build-arg xxx=xxx -t chihyinglin/keras_env:0.x -f Dockerfile .
-#		docker build -t chihyinglin/keras_env:0.5 -f Dockerfile .
-# 	push image:
-#		commmit dockerfile to https://github.com/cy-arduino/docker_keras_env
-# 	pull image:
-#		docker pull chihyinglin/keras_env
-# 	run image:
-#		jupyter notebook:
-#			docker run -p 0.0.0.0:xxxx:8888 -v /c/Users/cy/Desktop/ChihYing/docker/smart_chair/data:/root/data chihyinglin/keras_env:0.x /root/anaconda3/bin/jupyter notebook --ip=* --allow-root
-#			docker run -p 0.0.0.0:38888:8888 -v /c/Users/cy/Desktop/ChihYing/docker/smart_chair/data:/root/data chihyinglin/keras_env:0.2 /root/anaconda3/bin/jupyter notebook --ip=* --allow-root
-#		cmd line
-#			docker run -v /c/Users/cy/Desktop/ChihYing/docker/smart_chair/data:/root/data chihyinglin/keras_env:0.x 
-#			docker run -v /c/Users/cy/Desktop/ChihYing/docker/smart_chair/data:/root/data chihyinglin/keras_env:0.5
 
 From ubuntu:18.04
 
