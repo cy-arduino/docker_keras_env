@@ -8,10 +8,10 @@ LABEL description="create a keras running env"
 
 # Install system packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
-      bzip2 \
-	  patch \
-      wget && \
-    rm -rf /var/lib/apt/lists/*
+	bzip2 \
+	patch \
+	wget && \
+	rm -rf /var/lib/apt/lists/*
 
 # Install Anaconda
 ENV DL_PATH /root/download
