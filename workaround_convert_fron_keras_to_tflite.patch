@@ -1,0 +1,10 @@
+--- /root/anaconda3/lib/python3.6/site-packages/tensorflow/python/keras/engine/saving.py.ori	2018-11-22 01:26:13.919277800 +0000
++++ /root/anaconda3/lib/python3.6/site-packages/tensorflow/python/keras/engine/saving.py	2018-11-21 10:42:56.571689900 +0000
+@@ -247,6 +247,7 @@
+       # Recover loss functions and metrics.
+       loss = convert_custom_objects(training_config['loss'])
+       metrics = convert_custom_objects(training_config['metrics'])
++      training_config['weighted_metrics']=None
+       weighted_metrics = convert_custom_objects(
+           training_config['weighted_metrics'])
+       sample_weight_mode = training_config['sample_weight_mode']

@@ -18,13 +18,13 @@
 From ubuntu:18.04
 
 LABEL maintainer="chihying.phone@gmail.com"
-LABEL version="0.7"
+LABEL version="0.8"
 LABEL description="create a keras running env"
-
 
 # Install system packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
       bzip2 \
+	  patch \
       wget && \
     rm -rf /var/lib/apt/lists/*
 
@@ -48,8 +48,9 @@ ARG KERAS_VER=2.2.4
 RUN pip install keras==$KERAS_VER --force-reinstall
 
 # patch & workaround
-#COPY 
-RUN ls -al /
+COPY workaround_convert_fron_keras_to_tflite.patch /root
+RUN patch -p0 < /root/workaround_convert_fron_keras_to_tflite.patch
+RUN cd ~/ && rm -rf /root/*.patch
 
 # run command
 CMD ["/bin/bash", "-c", "/root/data/run.sh"]
