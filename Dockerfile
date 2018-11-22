@@ -18,7 +18,7 @@
 From ubuntu:18.04
 
 LABEL maintainer="chihying.phone@gmail.com"
-LABEL version="0.6"
+LABEL version="0.7"
 LABEL description="create a keras running env"
 
 
