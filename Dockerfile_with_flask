@@ -1,0 +1,20 @@
+# create a keras running env with flask
+
+From chihyinglin/keras_env:latest
+
+LABEL maintainer="chihying.phone@gmail.com"
+LABEL version="0.1"
+LABEL description="create a keras running env with flask support"
+
+# Install system packages
+RUN apt-get update && apt-get install -y --no-install-recommends \
+	zip unzip  \
+	&& rm -rf /var/lib/apt/lists/*
+
+# install flask and related modules
+RUN pip install flask --force-reinstall
+RUN pip install uuid --force-reinstall
+RUN pip install requests --force-reinstall
+
+# run command
+CMD ["/bin/bash", "-c", "/root/data/run.sh"]
