@@ -37,5 +37,8 @@ COPY workaround_convert_fron_keras_to_tflite.patch /root
 RUN patch -p0 < /root/workaround_convert_fron_keras_to_tflite.patch
 RUN cd ~/ && rm -rf /root/*.patch
 
+# install onnxmltools to convert keras model to onnx format
+RUN pip install onnxmltools
+
 # run command
 CMD ["/bin/bash", "-c", "/root/data/run.sh"]
