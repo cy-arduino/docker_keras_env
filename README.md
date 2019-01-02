@@ -1,4 +1,4 @@
-# create a keras running env
+# Docker image for keras + tensorflow
 
 ## pull image
 * docker pull chihyinglin/keras_env
