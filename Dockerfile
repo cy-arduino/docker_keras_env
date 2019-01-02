@@ -34,7 +34,7 @@ RUN pip install keras==$KERAS_VER --force-reinstall
 
 # patch & workaround
 COPY workaround_convert_fron_keras_to_tflite.patch /root
-RUN patch -p0 < /root/workaround_convert_fron_keras_to_tflite.patch
+RUN patch -p0 < /root/workaround_convert_from_keras_to_tflite.patch
 RUN cd ~/ && rm -rf /root/*.patch
 
 # install onnxmltools to convert keras model to onnx format
