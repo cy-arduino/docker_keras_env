@@ -33,7 +33,7 @@ ARG KERAS_VER=2.2.4
 RUN pip install keras==$KERAS_VER --force-reinstall
 
 # patch & workaround
-COPY workaround_convert_fron_keras_to_tflite.patch /root
+COPY workaround_convert_from_keras_to_tflite.patch /root
 RUN patch -p0 < /root/workaround_convert_from_keras_to_tflite.patch
 RUN cd ~/ && rm -rf /root/*.patch
 
