@@ -39,6 +39,9 @@ RUN cd ~/ && rm -rf /root/*.patch
 
 # install onnxmltools to convert keras model to onnx format
 RUN pip install onnxmltools
+RUN pip install torch
+RUN pip install torchvision
+RUN pip install matplotlib
 
 # run command
 CMD ["/bin/bash", "-c", "/root/data/run.sh"]
