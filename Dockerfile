@@ -22,8 +22,6 @@ RUN cd ~/ && rm -rf $DL_PATH
 
 ENV PATH /root/anaconda3/bin:${PATH}
 
-RUN pip install --upgrade pip
-
 # install tensorflow
 ARG TENSORFLOW_VER=1.11
 #RUN ["/bin/bash", "-c", "pip install tensorflow==$TENSORFLOW_VER --force-reinstall"]
